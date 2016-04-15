@@ -2,6 +2,8 @@
 
 var React = require('react-native');
 
+var SearchPage = require('./SearchPage');
+
 var styles = React.StyleSheet.create({
   text: {
     color: 'blue',
@@ -14,16 +16,6 @@ var styles = React.StyleSheet.create({
   }
 })
 
-class HelloWorld extends React.Component {
-  render() {
-
-    //return React.createElement(React.Text, {style: styles.text}, "Hello World!");
-
-    return <React.Text style={styles.text}>Hello World</React.Text>;
-
-  }
-}
-
 class PropertyFinderApp extends React.Component {
   render(){
     return(
@@ -31,7 +23,7 @@ class PropertyFinderApp extends React.Component {
         style={styles.container}
         initialRoute={{
           title: 'Property Finder',
-          component: HelloWorld
+          component: SearchPage
         }}
       />
     )
@@ -39,4 +31,4 @@ class PropertyFinderApp extends React.Component {
 }
 
 
-React.AppRegistry.registerComponent('PropertyFinder', function() { return HelloWorld });
+React.AppRegistry.registerComponent('PropertyFinder', function() { return PropertyFinderApp });
